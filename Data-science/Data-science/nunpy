@@ -1,0 +1,478 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "f1fc7a6c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "my_list = [1,2,3]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "4f82e880",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "056b6a59",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "arr = np.array(my_list)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "316043a2",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([1, 2, 3])"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "arr"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "8d12e5f7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# two dymensional arrays can be done by casting two list\n",
+    "my_mat = [[1,2,3],[4,5,6],[7,8,9]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "67df1b9f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[1, 2, 3],\n",
+       "       [4, 5, 6],\n",
+       "       [7, 8, 9]])"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "np.array(my_mat) #this array shows bellow is a two dymensional arrays, indicated by the two square brackets"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "915a33e7",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([ 0,  2,  4,  6,  8, 10])"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# creating numpy arrays, this uses a function called np.arange, similar to python range function\n",
+    "\n",
+    "np.arange(0, 11,2) # this will output even numbers bcos of the 2, according to the range provided"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "50717fc0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([0., 0., 0., 0., 0.])"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# trying to get zeros arrys\n",
+    "np.zeros(5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "1972dfc0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[0., 0., 0., 0., 0.],\n",
+       "       [0., 0., 0., 0., 0.],\n",
+       "       [0., 0., 0., 0., 0.],\n",
+       "       [0., 0., 0., 0., 0.],\n",
+       "       [0., 0., 0., 0., 0.]])"
+      ]
+     },
+     "execution_count": 16,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "np.zeros((5,5)) # using tuples, the first number reps. number of rows and the second that of columns"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "4b5a1e4f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[0., 0., 0., 0., 0.],\n",
+       "       [0., 0., 0., 0., 0.]])"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "np.zeros((2,5)) # this is a set of two rows and five columns"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "94d3d32f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([1., 1., 1., 1., 1.])"
+      ]
+     },
+     "execution_count": 18,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "np.ones(5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "c99afbfe",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[1., 1., 1., 1., 1.],\n",
+       "       [1., 1., 1., 1., 1.],\n",
+       "       [1., 1., 1., 1., 1.]])"
+      ]
+     },
+     "execution_count": 20,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "np.ones((3,5))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "0cb3a25e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([0.        , 0.05050505, 0.1010101 , 0.15151515, 0.2020202 ,\n",
+       "       0.25252525, 0.3030303 , 0.35353535, 0.4040404 , 0.45454545,\n",
+       "       0.50505051, 0.55555556, 0.60606061, 0.65656566, 0.70707071,\n",
+       "       0.75757576, 0.80808081, 0.85858586, 0.90909091, 0.95959596,\n",
+       "       1.01010101, 1.06060606, 1.11111111, 1.16161616, 1.21212121,\n",
+       "       1.26262626, 1.31313131, 1.36363636, 1.41414141, 1.46464646,\n",
+       "       1.51515152, 1.56565657, 1.61616162, 1.66666667, 1.71717172,\n",
+       "       1.76767677, 1.81818182, 1.86868687, 1.91919192, 1.96969697,\n",
+       "       2.02020202, 2.07070707, 2.12121212, 2.17171717, 2.22222222,\n",
+       "       2.27272727, 2.32323232, 2.37373737, 2.42424242, 2.47474747,\n",
+       "       2.52525253, 2.57575758, 2.62626263, 2.67676768, 2.72727273,\n",
+       "       2.77777778, 2.82828283, 2.87878788, 2.92929293, 2.97979798,\n",
+       "       3.03030303, 3.08080808, 3.13131313, 3.18181818, 3.23232323,\n",
+       "       3.28282828, 3.33333333, 3.38383838, 3.43434343, 3.48484848,\n",
+       "       3.53535354, 3.58585859, 3.63636364, 3.68686869, 3.73737374,\n",
+       "       3.78787879, 3.83838384, 3.88888889, 3.93939394, 3.98989899,\n",
+       "       4.04040404, 4.09090909, 4.14141414, 4.19191919, 4.24242424,\n",
+       "       4.29292929, 4.34343434, 4.39393939, 4.44444444, 4.49494949,\n",
+       "       4.54545455, 4.5959596 , 4.64646465, 4.6969697 , 4.74747475,\n",
+       "       4.7979798 , 4.84848485, 4.8989899 , 4.94949495, 5.        ])"
+      ]
+     },
+     "execution_count": 29,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# another great function is what is called the linspace, don't confuse it with the function called range\n",
+    "np.linspace(0,5,100) # the first number and second spacifies a stat and a stop arguments, while the last specifies the evenly spaces\n",
+    "# btn the passed in values (firsst and second numbers). note this returns a one dymensional vector, can be told from the curly braces"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "522ff1f1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# what is the difference btn lenght and linspaces in Numpy?\n",
+    "# the only difference there is, range will take the last value as the step size you want, \n",
+    "# while linspace will take the last argument as the number of space you want   "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "1b851f71",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[1., 0., 0., 0.],\n",
+       "       [0., 1., 0., 0.],\n",
+       "       [0., 0., 1., 0.],\n",
+       "       [0., 0., 0., 1.]])"
+      ]
+     },
+     "execution_count": 31,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# identity matrics using Numpy, this ise used in dealing with linear or algebraic problems, that always ahs same number of rows and colums,\n",
+    "# and is a two dymensional matrics. has a diagonal one ones, the rest are zeros\n",
+    "np.eye(4) # ie y it takes only one argument, as identity matrics must be squred as the output in the np.eye"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "20e92fd4",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([0.87320631, 0.37960654, 0.49611547, 0.96475888, 0.97724674])"
+      ]
+     },
+     "execution_count": 32,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Numpy has allots of arrays of random numbers, which we will continue using throught this couse.\n",
+    "# np.random.rand(5) # one dymensional array"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "id": "96d825cd",
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [],
+   "source": [
+    "# creating two dymensional array\n",
+    "# np.random.rand(5,5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "id": "f120b21d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([-0.5188963 , -0.09123088, -0.49253527, -0.62452265,  0.02813449])"
+      ]
+     },
+     "execution_count": 35,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#  trying to get number distibutions\n",
+    "# np.random.randn(5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "id": "3312b957",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[ 0.09609841,  0.04824382, -2.01127785,  0.20102422],\n",
+       "       [-0.98684249, -0.82776292, -0.33977097, -1.63795018],\n",
+       "       [ 0.43743469, -0.39545952, -0.61754123, -1.30644652],\n",
+       "       [ 0.37604714, -0.33662153, -0.23070247,  0.07249257]])"
+      ]
+     },
+     "execution_count": 36,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# creating two dymensions\n",
+    "# np.random.randn(4,4)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "8d819b1c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "72"
+      ]
+     },
+     "execution_count": 38,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# now using randint() function\n",
+    "# np.random.randint(3,100)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "id": "c4ff04b8",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([65, 81, 45, 36, 16, 90, 14, 90, 91, 65])"
+      ]
+     },
+     "execution_count": 49,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# adding the number of digits you want to output\n",
+    "# np.random.randint(3,100,10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "id": "6cb36f3f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# other np array functions.\n",
+    "\n",
+    "arr = np.arange(25)"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "f554caac",
+   "metadata": {},
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "426d2b21",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
